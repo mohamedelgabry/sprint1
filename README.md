@@ -48,7 +48,7 @@ Tutorial Members:
 
 19-Bassant Hossam Hussein Mohamed Eldeeb
 
-20-Saleh Mohamed Saleh Mostafa Elhadidy
+20-Saleh Mohamed Saleh Mostafa Elhadidy I love music and coding
 
 21-Shehab Aly Elsayed Aly Elshennawy
 
@@ -61,6 +61,3 @@ Tutorial Members:
 25-Mohamed Amr Mohamed Hassan Elgabry
 
 26-Ziyad Khaled Abdelfattah Abdelmageed
-
-
-
