@@ -18,4 +18,13 @@ Loay Alaa --- I love Sports.
 
 Ahmed Hossam Moheb --- I love to play the guitar and music is my passion
 
-Salma Osama *flips hair*
+Salma Osama *flips hair*<<<<<<< HEAD
+=======
+Omar Rifky --- I love Emma Watson
+
+Abdelrahman Amr Salem --- I love playing هجوله
+
+Mohamed Lotfy --- shokran.
+
+Ziyad Khaled --- I love Sports wanahy
+>>>>>>> 8b81cb3ca1cefb33abfd8ea3536af259833ba693
