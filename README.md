@@ -32,3 +32,4 @@ HAHAHAHAHAHAHAHAHAHAHAHAHA //Salma vvwalahy
 Ahmed Yacout --- Emma stone a7la mn Emma watson ya rifky we bekteer
 
 Ahmed Mahdy --- bye
+Omar Tarek --- bye ya Mahdy
