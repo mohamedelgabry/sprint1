@@ -35,3 +35,4 @@ Ahmed Mahdy --- bye
 Omar Tarek --- bye ya Mahdy
 
 Amr Mohamed --- I love football
+Bassant Hossam --- own a parrot
