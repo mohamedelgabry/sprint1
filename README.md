@@ -37,6 +37,8 @@ Omar Tarek --- bye ya Mahdy
 
 Amr Mohamed --- I love football
 
+Aly Amr Osman --- I love vikings
+
 Bassant Hossam --- own a parrot
 
 Omar ALzmrany --- I love playing football
@@ -80,6 +82,8 @@ Ahmed Mahdy --- bye
 Omar Tarek --- bye ya Mahdy
 
 Amr Mohamed --- I love football
+
+Aly Amr Osman --- I love vikings 
 
 Bassant Hossam --- own a parrot
 
