@@ -2,7 +2,7 @@
 # Github - Sprint 0
 
 
-<img src="logo.jpeg" width="200" height="200">
+<img src="README-Images/logo-horizontal.jpg" width="960" height="201">
 
 About:
 ======
@@ -63,3 +63,8 @@ Youssef Yasser --- I love you
 Khaled Elsayed -- I love football and coding
 
 Shehab EL-Shennawy -- Trance and Rock maybe some metal 
+
+
+Our Motto:
+===========
+<img src="README-Images/footer-picture.jpeg" width="350" height="350">
