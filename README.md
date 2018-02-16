@@ -1,5 +1,5 @@
-ï»¿
-ï»¿# Github - Sprint 0
+
+?# Github - Sprint 0
 
 
 Logo (To Be added)
@@ -23,7 +23,7 @@ Salma Osama ---*flips hair*
 
 Omar Rifky --- I love Emma Watson
 
-Abdelrahman Amr Salem --- I love playing Ù‡Ø¬ÙˆÙ„Ù‡
+Abdelrahman Amr Salem --- I love playing åÌæáå
 
 Mohamed Lotfy --- shokran.
 
@@ -61,3 +61,5 @@ Abdelrahman Ashraf -- I love watching movies
 Youssef Yasser --- I love you
 
 Khaled Elsayed -- I love football and coding
+
+Shehab EL-Shennawy -- Trance and Rock maybe some metal 
