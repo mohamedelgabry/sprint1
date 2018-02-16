@@ -2,7 +2,7 @@
 # Github - Sprint 0
 
 
-![Logo](logo.jpeg =200x200)
+<img src="logo.jpeg" width="200" height="200">
 
 About:
 ======
