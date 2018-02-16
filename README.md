@@ -22,7 +22,7 @@ Salma Osama ---*flips hair*
 
 Omar Rifky --- I love Emma Watson
 
-Abdelrahman Amr Salem --- I love playing åÌæáå
+Abdelrahman Amr Salem --- I love playing Ã¥ÃŒÃ¦Ã¡Ã¥
 
 Mohamed Lotfy --- shokran.
 
@@ -65,6 +65,6 @@ Khaled Elsayed -- I love football and coding
 Shehab EL-Shennawy -- Trance and Rock maybe some metal 
 
 
-Our Motto:
+Our Tutorial:
 ===========
-<img src="README-Images/footer-picture.jpeg" width="350" height="350">
+<img src="README-Images/footer-picture.jpeg" width="450" height="450">
