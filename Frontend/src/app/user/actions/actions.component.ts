@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-dashboard-items',
-  template: ``
+  template: `hello`
 })
 export class ActionsComponent {}

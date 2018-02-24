@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: 'actions',
-        loadChildren: './actions/actions.module#Login'
+        loadChildren: './actions/actions.module#ActionsModule'
       },
       {
         path: '',

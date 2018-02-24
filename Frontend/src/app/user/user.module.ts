@@ -11,5 +11,5 @@ import { UserComponent } from './user.component';
   entryComponents: [],
   providers: []
 })
-export class DashboardModule {}
+export class UserModule {}
 
