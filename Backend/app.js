@@ -5,10 +5,12 @@ var express = require('express'),
   helmet = require('helmet'),
   compression = require('compression'),
   bodyParser = require('body-parser'),
-  routes = require('./api/routes'),
+
   config = require('./api/config/Config'),
   passport = require('passport');
- LocalStrategy = require('passport-local').Strategy;
+  LocalStrategy = require('passport-local').Strategy,
+  User = require('./api/models/User'),
+  routes = require('./api/routes');
   app = express();
 
 app.set('secret', config.SECRET);
@@ -52,7 +54,7 @@ app.use(function(req, res) {
     data: null
   });
 });
-var User = require('./api/models/User');
+
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());

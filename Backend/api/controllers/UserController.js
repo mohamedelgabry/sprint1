@@ -12,7 +12,7 @@ var mongoose = require('mongoose'),
                 msg: 'User already exists',
                 data: null
               });
-              return;        
+              return;
             }
         passport.authenticate('local')(req, res, function () {
             res.status(200).json({
@@ -25,7 +25,7 @@ var mongoose = require('mongoose'),
   }
 
   module.exports.login =  passport.authenticate('local'),function(req,res){
-    console.log('In Login');    
+    console.log('In Login');
     res.send(req.session);
   }
 
