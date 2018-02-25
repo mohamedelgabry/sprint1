@@ -12,6 +12,8 @@
 
 <nb-actions size="medium" class="header-container right">
   <nb-action>
+    <a href="#/user/login">Login |</a>         
+    <a href="#/user/register">| Register</a>
     <nb-user [menu]="userMenu" [name]="user?.username" (menuClick)="onMenuClick($event)"></nb-user>
   </nb-action>
 </nb-actions>
