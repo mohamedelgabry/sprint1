@@ -7,12 +7,26 @@ var userSchema = mongoose.Schema({
    username: {
         type: String,
         trim: true,
-        lowercase: true
+        lowercase: true,
+        required: true
     },
    password: {
-       type: String
+       type: String,
+       required: true
          
     },
+    firstname: {
+        type: String
+          
+     },
+     lastname: {
+        type: String
+          
+     },
+     email: {
+        type: String,
+        required:true
+     },
     createdAt: {
         type: Date,
         default: Date.now

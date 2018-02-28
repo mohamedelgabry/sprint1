@@ -13,7 +13,7 @@ jwtOptions.secretOrKey = 'set18';
     console.log(req.body);
     // bcrypt.hash(req.body.password, 10, function(err, hash) {
       // Store hash in database
-      User.register(new User({username: req.body.username, password:req.body.password}),req.body.password, function(err, account) {
+      User.register(new User({username: req.body.username, password:req.body.password,firstname:req.body.firstname,lastname:req.body.lastname,email:req.body.email}),req.body.password, function(err, account) {
         if (err) {
             res.status(422).json({
                 err: err,
