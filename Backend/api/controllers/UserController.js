@@ -2,10 +2,18 @@ var mongoose = require('mongoose'),
   moment = require('moment'),
   passport = require('passport'),
   Validations = require('../utils/Validations'),
+  bcrypt = require('bcryptjs'),
   User = mongoose.model('User');
+  var jwtOptions = {}
+jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = 'set18';
+
 
   module.exports.register = function(req,res){
-      User.register(new User({username: req.body.username}), req.body.password, function(err, account) {
+    console.log(req.body);
+    // bcrypt.hash(req.body.password, 10, function(err, hash) {
+      // Store hash in database
+      User.register(new User({username: req.body.username, password:req.body.password}),req.body.password, function(err, account) {
         if (err) {
             res.status(422).json({
                 err: err,
@@ -22,15 +30,31 @@ var mongoose = require('mongoose'),
               });
         });
       });
+    // });
   }
 
-  module.exports.login =  passport.authenticate('local'),function(req,res){
-    console.log('In Login');
-    res.send(req.session);
-  }
+  module.exports.login =  function(req, res) {
+    // usually this would be a database call:
+    User.findOne({"username": req.body.username},function(err, user) {
+      if (!user){
+        res.status(401).json({message:"no such user found "+req.body.username});
+      }else{
+        console.log(user);
+        bcrypt.compare(user.password,req.body.password,function(err,out){
+          if(res){
+          var payload = {"username": user.username,'expiresIn': 100000000000000000000};
+        var token = jwt.sign(payload, jwtOptions.secretOrKey);
+        res.json({message: "ok", token: token});
+        } else {
+          res.status(401).json({message:"passwords did not match"});
+        }
+      // from now on we'll identify the user by the id and the id is the only personalized value that goes into our token
+  });
+  }});}
+  
 
   module.exports.logout = function(req,res){
-    req.loogout();
+    req.logout();
 }
 module.exports.EditUser = function(req, res, next) {
     if (!Validations.isObjectId(req.params.userId)) {

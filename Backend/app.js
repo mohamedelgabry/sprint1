@@ -5,11 +5,15 @@ var express = require('express'),
   helmet = require('helmet'),
   compression = require('compression'),
   bodyParser = require('body-parser'),
-
   config = require('./api/config/Config'),
   passport = require('passport');
   LocalStrategy = require('passport-local').Strategy,
   User = require('./api/models/User'),
+  jwt = require('jsonwebtoken'),
+  passportJWT = require("passport-jwt"),
+  ExtractJwt = passportJWT.ExtractJwt,
+  JwtStrategy = passportJWT.Strategy,
+  bCrypt = require('bcryptjs'),
   routes = require('./api/routes');
   app = express();
 
@@ -31,8 +35,24 @@ app.use(
     extended: false
   })
 );
-app.use(passport.initialize());
-app.use(passport.session());
+
+var jwtOptions = {}
+jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeaderAsBearerToken();
+jwtOptions.secretOrKey = 'set18';
+
+var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
+  console.log('payload received', jwt_payload);
+  // usually this would be a database call:
+  User.findOne({"username":jwt_payload.username},function(err, user) {
+  if (user) {
+    next(null, user);
+  } else {
+    next(null, false);
+  }
+})});
+
+passport.use(strategy);
+
 app.use('/api', routes);
 
 // 500 internal server error handler
@@ -55,7 +75,6 @@ app.use(function(req, res) {
   });
 });
 
-passport.use(new LocalStrategy(User.authenticate()));
-passport.serializeUser(User.serializeUser());
-passport.deserializeUser(User.deserializeUser());
+
+
 module.exports = app;

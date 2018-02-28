@@ -1,7 +1,8 @@
 var express = require('express'),
   router = express.Router(),
   userCtrl = require('../controllers/UserController'),
-  productCtrl = require('../controllers/ProductController');
+  productCtrl = require('../controllers/ProductController'),
+  passport = require('passport');
 
 //-------------------------------Product Routes-----------------------------------
 router.get('/product/getProducts', productCtrl.getProducts);
@@ -21,7 +22,9 @@ router.get('/logout',userCtrl.logout);
 router.get('/ping', function(req, res){
   res.status(200).send("pong!");
 });
-
+router.get("/secret", passport.authenticate('jwt', { session: false }), function(req, res){
+  res.status(200).send("Success! You can not see this without a token");
+});
 
 
 module.exports = router;
