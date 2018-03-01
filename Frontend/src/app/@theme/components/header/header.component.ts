@@ -10,6 +10,8 @@ export class HeaderComponent implements OnInit {
   @Input() position = 'normal';
   user: any;
   userMenu: any[];
+  usercontrols: any;
+  loggedin:boolean;
 
   constructor(
     private sidebarService: NbSidebarService,
@@ -17,7 +19,15 @@ export class HeaderComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.userMenu = [{ title: 'Logout' }];
+    this.user = JSON.parse(localStorage.getItem("user"));
+    if(this.user){
+      this.loggedin = true;
+      this.usercontrols =''
+      this.userMenu = [{ title: 'Logout' }];
+    }else{
+      this.loggedin=false;
+      this.usercontrols = ''
+    }
   }
 
   toggleSidebar(): boolean {
@@ -31,7 +41,9 @@ export class HeaderComponent implements OnInit {
 
   onMenuClick(event) {
     if (event.title === 'Logout') {
-      // Think about what to do ;)
+      localStorage.removeItem("user");
+      this.user=null;
+      this.loggedin=false;
     }
   }
 }

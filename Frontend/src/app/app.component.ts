@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,8 @@ export class AppComponent {
   // Scroll up to the top of the page on changing the route
   onActivate(event) {
     window.scroll(0, 0);
+  }
+
+  constructor(private http: HttpClient){
   }
 }
